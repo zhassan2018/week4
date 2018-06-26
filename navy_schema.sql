@@ -1,0 +1,38 @@
+DROP TABLE IF EXISTS fleet;
+DROP TABLE IF EXISTS sailor;
+DROP TABLE IF EXISTS ship;
+DROP TABLE IF EXISTS assignment;
+DROP TABLE IF EXISTS rank;
+
+
+CREATE TABLE fleet (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(50)
+);
+
+CREATE TABLE sailor (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(50),
+  birthdate DATE
+);
+
+CREATE TABLE ship (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(50),
+  buildDate DATE
+);
+
+CREATE TABLE assignment (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(50),
+  startTime INT,
+  endTime INT,
+  buildDate DATE
+);
+
+CREATE TABLE rank (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(50)
+)
+
+
